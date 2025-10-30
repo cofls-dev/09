@@ -1,22 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define SIZE 5
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) 
 {
-	int i;
-	int testscore[5];
+	int i, average;
+	int sum=0;
+	int testscore[SIZE];
 	
-	testscore[0]=10;
-	testscore[1]=20;
-	testscore[2]=30;
-	testscore[3]=40;
-	testscore[4]=50;
-	for (i=0; i<5 ; i++)
+	
+	sum = 0;
+	for (i=0; i<SIZE; i++)
 	{
-	printf("grade[%i] = %i\n ", i, testscore[i]);
-}
+		printf("학생 성적을  입력하세요: ");
+		scanf("%d", &testscore[i]);
+		sum+= testscore[i];
+	}
+	
+	   
+
+	printf("성적 평균 : %d\n", sum / SIZE);
+	
+	
 	system("PAUSE");
 	return 0;
 }
